@@ -15771,3 +15771,26 @@ export const QUESTIONS: Question[] = [
     rationale: "NEC is characterized by intestinal immaturity and bacterial overgrowth in association with altered blood flow."
   }
 ];
+// Get random questions from all chapters or a specific chapter
+export const getRandomQuestions = (
+  count: number,
+  chapterId?: number
+): Question[] => {
+  const sourceQuestions = chapterId
+    ? QUESTIONS.filter((q) => q.chapterId === chapterId)
+    : QUESTIONS;
+
+  const shuffled = [...sourceQuestions];
+
+  // Fisher-Yates shuffle
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [shuffled[i], shuffled[j]] = [
+      shuffled[j],
+      shuffled[i],
+    ];
+  }
+
+  return shuffled.slice(0, count);
+};
