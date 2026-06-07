@@ -1,0 +1,6 @@
+{
+  "name": "Obstetrics MCQ Booklet",
+  "description": "An interactive study booklet and quiz companion for the Obstetrics by Ten Teachers textbook, featuring practice quizzes, mock exams, chapter-by-chapter progress tracking, print-to-PDF support, and a Gemini-powered study companion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
