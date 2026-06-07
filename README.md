@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# MediApp (Vite + Gemini)
 
-# Run and deploy your AI Studio app
+## Run locally
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/5652f236-fcc2-4122-9faa-10036b9b14b9
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Set `GEMINI_API_KEY` in `.env.local`
+3. Start local server:
    `npm run dev`
+
+## Deploy to Vercel
+
+1. Push this repository to GitHub and import it into Vercel.
+2. In Vercel Project Settings → **Environment Variables**, add:
+   - `GEMINI_API_KEY=<your_real_key>`
+3. Keep build settings:
+   - Framework: `Vite`
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+4. Deploy.
+
+After deploy, verify:
+- `GET /api/health`
+- AI explanation flow (`/api/gemini/explain`)
+- AI recommendation flow (`/api/gemini/recommend`)
+
+> Note: GitHub repository secrets are not automatically injected into Vercel runtime. Add `GEMINI_API_KEY` in Vercel project settings directly.
