@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Question } from "../types";
 import { Sparkles, Send, Brain, Loader2, RefreshCw, BookOpen, AlertCircle } from "lucide-react";
+import { GoogleGenAI } from "@google/genai";
 
 interface AICompanionProps {
   question: Question;
@@ -28,28 +29,66 @@ export default function AICompanion({ question, selectedAnswer }: AICompanionPro
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("/api/gemini/explain", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question: question.question,
-          options: question.options,
-          selectedAnswer: selectedAnswer || null,
-          correctAnswer: question.answer,
-          rationale: question.rationale,
-        }),
-      });
+      const clientApiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      if (clientApiKey) {
+        const aiInstance = new GoogleGenAI({ apiKey: clientApiKey });
+        const response = await aiInstance.models.generateContent({
+          model: "gemini-3.5-flash",
+          contents: `
+            You are an expert obstetrician and clinical medical tutor specializing in training medical students and residents for high-stakes clinical exams (e.g., MRCOG, medical school finals), based on the "Obstetrics by Ten Teachers" textbook.
+            
+            A student has just answered this MCQ:
+            ---
+            Question: ${question.question}
+            Options:
+            A: ${question.options.A}
+            B: ${question.options.B}
+            C: ${question.options.C}
+            D: ${question.options.D}
+            E: ${question.options.E}
+            
+            Student's Choice: ${selectedAnswer || "None (Skipped)"}
+            Correct Answer: ${question.answer}
+            Official Rationale: ${question.rationale}
+            ---
+            
+            Please provide:
+            1. A friendly, supportive, and clinical explanation of why the correct option is indeed the absolute best choice.
+            2. A brief breakdown of why the other options are either incorrect or less preferred (differential learning points).
+            3. 1 or 2 high-yield clinical "Gold Standards" or "Ten Teachers Rules of Thumb" to remember for exams (e.g. key timing guidelines, drug contraindications).
+            
+            Format the response as beautiful, clean Markdown with bullet points, italicized terms where appropriate, and bold key clinical variables. Keep it succinct, encouraging, and highly educational.
+          `,
+        });
+        setExplanation(response.text || "No explanation returned from Gemini.");
+      } else {
+        const response = await fetch("/api/gemini/explain", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            question: question.question,
+            options: question.options,
+            selectedAnswer: selectedAnswer || null,
+            correctAnswer: question.answer,
+            rationale: question.rationale,
+          }),
+        });
 
-      if (!response.ok) {
-        const errData = await response.json().catch(() => ({}));
-        throw new Error(errData.error || "Tutor service currently offline. Verify GEMINI_API_KEY is configured.");
+        if (!response.ok) {
+          const errData = await response.json().catch(() => ({}));
+          throw new Error(errData.error || "Tutor service currently offline. Verify GEMINI_API_KEY is configured.");
+        }
+
+        const data = await response.json();
+        setExplanation(data.explanation);
       }
-
-      const data = await response.json();
-      setExplanation(data.explanation);
     } catch (err: any) {
       console.error(err);
-      setError(err.message || "Failed to generate tutor explanation. Please try again.");
+      if (!import.meta.env.VITE_GEMINI_API_KEY && (err.message?.includes("Failed to fetch") || err.message?.includes("fetch"))) {
+        setError("AI tutor service is configured for server proxy, but the backend is currently offline. Since you deployed to static hosting like GitHub Pages, please configure the 'VITE_GEMINI_API_KEY' environment variable inside your GitHub Repository secrets, or run this app in a full-stack Cloud Run environment.");
+      } else {
+        setError(err.message || "Failed to generate tutor explanation. Please try again.");
+      }
     } finally {
       setLoading(false);
     }
@@ -86,23 +125,33 @@ export default function AICompanion({ question, selectedAnswer }: AICompanionPro
       Be precise, professional, and explain clearly using Markdown.
       `;
 
-      const response = await fetch("/api/gemini/explain", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question: chatPrompt,
-          options: question.options,
-          correctAnswer: question.answer,
-          rationale: question.rationale
-        })
-      });
+      const clientApiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      if (clientApiKey) {
+        const aiInstance = new GoogleGenAI({ apiKey: clientApiKey });
+        const response = await aiInstance.models.generateContent({
+          model: "gemini-3.5-flash",
+          contents: chatPrompt
+        });
+        setChatLog(prev => [...prev, { sender: "ai", text: response.text || "No response returned." }]);
+      } else {
+        const response = await fetch("/api/gemini/explain", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            question: chatPrompt,
+            options: question.options,
+            correctAnswer: question.answer,
+            rationale: question.rationale
+          })
+        });
 
-      if (!response.ok) {
-        throw new Error("Failed to send custom message to Gemini.");
+        if (!response.ok) {
+          throw new Error("Failed to send custom message to Gemini.");
+        }
+
+        const data = await response.json();
+        setChatLog(prev => [...prev, { sender: "ai", text: data.explanation }]);
       }
-
-      const data = await response.json();
-      setChatLog(prev => [...prev, { sender: "ai", text: data.explanation }]);
     } catch (err: any) {
       console.error(err);
       setError("AI was unable to answer the custom question. Check API settings.");

@@ -34,7 +34,7 @@ function getGeminiClient(): GoogleGenAI {
 
 // REST API Endpoints
 app.get("/api/health", (req: Request, res: Response) => {
-  res.json({ status: "ok", timestamp: new Date() });
+  res.json({ status: "ok", timeInWorkspace: new Date() });
 });
 
 // Post review to Gemini Study Companion

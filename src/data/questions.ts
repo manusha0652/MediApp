@@ -1,22 +1,22 @@
 import { Question, Chapter } from "../types";
 
 export const CHAPTERS: Chapter[] = [
-  { id: 1, name: "Chapter 1: Obstetric History and Examination", description: "Fetal dating, G&P scoring, domestic abuse screening, BMI risks, BP protocols, SFH monitoring, and abdominal palpation.", questionCount: 10 },
-  { id: 2, name: "Chapter 2: Antenatal Care", description: "Global maternal mortality, NIPT, anaemia definition, booking screens, anti-D prophylaxis, Down combined screening, and twin plans.", questionCount: 15 },
-  { id: 3, name: "Chapter 3: Normal Fetal Development and Growth", description: "DOHaD hypothesis, customized growth centiles, shunts, ductus arteriosus closure risks, midgut rotation, and Potter syndrome.", questionCount: 10 },
-  { id: 4, name: "Chapter 4: Assessment of Fetal Well-being", description: "Combined screening CRL boundaries, twins chorionicity signs, FGR brain sparing, Doppler indices (MCA and DV), and biophysical scoring.", questionCount: 15 },
-  { id: 5, name: "Chapter 5: Prenatal Diagnosis", description: "Miscarriage risks for CVS/amniocentesis, confined placental mosaicism, gastroschisis vs exomphalos differentiation, and cranial signs of NTDs.", questionCount: 6 },
-  { id: 6, name: "Chapter 6: Antenatal Obstetric Complications", description: "Incarcerated uterus, obstetric cholestasis bile acid levels, placental abruption, breech presentation, DVT management, and unstable lie.", questionCount: 10 },
-  { id: 7, name: "Chapter 7: Multiple Pregnancy", description: "Monochorionic complications, Twin-to-Twin Transfusion Syndrome Quintero staging, Twin Reversed Arterial Perfusion (TRAP) sequence, and management rules.", questionCount: 5 },
-  { id: 8, name: "Chapter 8: Pre-existing Medical Disorders", description: "Management of chronic diseases in pregnancy: Epilepsy, Cardiac disease, Diabetes target levels, and Asthma.", questionCount: 5 },
-  { id: 9, name: "Chapter 9: Obstetric Medicine", description: "Hypertensive disorders of pregnancy, gestational diabetes, thyroid disease, liver disorders, and thrombophilia.", questionCount: 5 },
-  { id: 10, name: "Chapter 10: Antenatal Emergencies", description: "Severe antepartum haemorrhage, vasa praevia, cord prolapse, and maternal collapse algorithms.", questionCount: 4 },
-  { id: 11, name: "Chapter 11: Normal Labour", description: "Physiology of parturition, pelvic anatomy, stages of labour, and the cardinal movements of delivery.", questionCount: 4 },
-  { id: 12, name: "Chapter 12: Monitoring in Labour", description: "Assessing progress using partograms, digital vaginal exams, CTG interpretation, and fetal blood sampling parameters.", questionCount: 4 },
-  { id: 13, name: "Chapter 13: Pain Relief in Labour", description: "Pharmacological and non-pharmacological methods: Epidurals, spinal blocks, Entonox, and systemic opioids.", questionCount: 3 },
-  { id: 14, name: "Chapter 14: Delivery", description: "Normal vaginal deliveries, operative vaginal procedures (forceps and vacuum), and Caesarean section protocols.", questionCount: 5 },
-  { id: 15, name: "Chapter 15: Obstetric Emergencies in Labour", description: "Shoulder dystocia manoeuvres, postpartum haemorrhage (PPH) algorithms, uterine rupture, and embolisms.", questionCount: 5 },
-  { id: 16, name: "Chapter 16: The Puerperium and Neonate", description: "Lactation physiology, postpartum depression vs. psychosis, mastitis, APGAR scores, and basic neonatal resuscitation.", questionCount: 5 }
+  { id: 1, name: "Chapter 1: Obstetric History and Examination", description: "Fetal dating, G&P scoring, domestic abuse screening, BMI risks, BP protocols, SFH monitoring, and abdominal palpation.", questionCount: 12 },
+  { id: 2, name: "Chapter 2: Antenatal Care", description: "Global maternal mortality, NIPT, anaemia definition, booking screens, anti-D prophylaxis, Down combined screening, and twin plans.", questionCount: 17 },
+  { id: 3, name: "Chapter 3: Normal Fetal Development and Growth", description: "DOHaD hypothesis, customized growth centiles, shunts, ductus arteriosus closure risks, midgut rotation, and Potter syndrome.", questionCount: 12 },
+  { id: 4, name: "Chapter 4: Assessment of Fetal Well-being", description: "Combined screening CRL boundaries, twins chorionicity signs, FGR brain sparing, Doppler indices (MCA and DV), and biophysical scoring.", questionCount: 17 },
+  { id: 5, name: "Chapter 5: Prenatal Diagnosis", description: "Miscarriage risks for CVS/amniocentesis, confined placental mosaicism, gastroschisis vs exomphalos differentiation, and cranial signs of NTDs.", questionCount: 8 },
+  { id: 6, name: "Chapter 6: Antenatal Obstetric Complications", description: "Incarcerated uterus, obstetric cholestasis bile acid levels, placental abruption, breech presentation, DVT management, and unstable lie.", questionCount: 12 },
+  { id: 7, name: "Chapter 7: Multiple Pregnancy", description: "Monochorionic complications, Twin-to-Twin Transfusion Syndrome Quintero staging, Twin Reversed Arterial Perfusion (TRAP) sequence, and management rules.", questionCount: 7 },
+  { id: 8, name: "Chapter 8: Pre-existing Medical Disorders", description: "Management of chronic diseases in pregnancy: Epilepsy, Cardiac disease, Diabetes target levels, and Asthma.", questionCount: 7 },
+  { id: 9, name: "Chapter 9: Obstetric Medicine", description: "Hypertensive disorders of pregnancy, gestational diabetes, thyroid disease, liver disorders, and thrombophilia.", questionCount: 7 },
+  { id: 10, name: "Chapter 10: Antenatal Emergencies", description: "Severe antepartum haemorrhage, vasa praevia, cord prolapse, and maternal collapse algorithms.", questionCount: 6 },
+  { id: 11, name: "Chapter 11: Normal Labour", description: "Physiology of parturition, pelvic anatomy, stages of labour, and the cardinal movements of delivery.", questionCount: 6 },
+  { id: 12, name: "Chapter 12: Monitoring in Labour", description: "Assessing progress using partograms, digital vaginal exams, CTG interpretation, and fetal blood sampling parameters.", questionCount: 6 },
+  { id: 13, name: "Chapter 13: Pain Relief in Labour", description: "Pharmacological and non-pharmacological methods: Epidurals, spinal blocks, Entonox, and systemic opioids.", questionCount: 5 },
+  { id: 14, name: "Chapter 14: Delivery", description: "Normal vaginal deliveries, operative vaginal procedures (forceps and vacuum), and Caesarean section protocols.", questionCount: 7 },
+  { id: 15, name: "Chapter 15: Obstetric Emergencies in Labour", description: "Shoulder dystocia manoeuvres, postpartum haemorrhage (PPH) algorithms, uterine rupture, and embolisms.", questionCount: 7 },
+  { id: 16, name: "Chapter 16: The Puerperium and Neonate", description: "Lactation physiology, postpartum depression vs. psychosis, mastitis, APGAR scores, and basic neonatal resuscitation.", questionCount: 9 }
 ];
 
 export const QUESTIONS: Question[] = [
@@ -1715,6 +1715,518 @@ export const QUESTIONS: Question[] = [
     },
     answer: "B",
     rationale: "Postpartum psychosis is a psychiatric emergency presenting within the first few weeks postpartum, characterized by hallucinations, delusions, mania, and confusion. Admission to a Mother and Baby Unit (MBU) is indicated to treat the mother while ensuring the safety and bonding of the infant."
+  },
+
+  // --- NEW ADDITIONAL QUESTIONS ADDED PER USER REQUEST MATCHING EXHAUSTIVE CHAPTERS ---
+  {
+    id: 112,
+    chapterId: 1,
+    chapterName: "Obstetric History and Examination",
+    question: "What is the primary clinical purpose of preconceptual counselling?",
+    options: {
+      A: "To diagnose gestational diabetes in the first trimester",
+      B: "To optimize maternal health before pregnancy and maximize the chances of a healthy pregnancy",
+      C: "To schedule the delivery date and plan a elective Caesarean section",
+      D: "To perform routine amniocentesis on all patients",
+      E: "To bypass booking scans entirely"
+    },
+    answer: "B",
+    rationale: "Preconceptual counselling provides an opportunity to review patients prior to conception, optimize maternal health, recognize medical issues, amend lifestyle (such as smoking or alcohol use), address social issues, and reduce maternal and perinatal morbidity and mortality."
+  },
+  {
+    id: 113,
+    chapterId: 1,
+    chapterName: "Obstetric History and Examination",
+    question: "A patient with epilepsy controlled on sodium valproate attends a preconceptual check. What is the most appropriate tutor-recommended advice?",
+    options: {
+      A: "Continue sodium valproate throughout pregnancy as it has no teratogenic risk.",
+      B: "Stop all antiepileptic medications immediately on the day of conception.",
+      C: "Refer to a neurologist prior to pregnancy to discuss changing to a safer alternative (e.g., lamotrigine or levetiracetam).",
+      D: "Switch immediately to high-dose aspirin as safety is proven.",
+      E: "Advise the patient that pregnancy is absolutely contraindicated under any circumstances."
+    },
+    answer: "C",
+    rationale: "Sodium valproate is highly teratogenic and contraindicated in pregnant women and females of childbearing potential unless a pregnancy prevention program is in place. Preconceptual counselling should involve a referral to a neurologist to discuss transitioning to safer antiepileptic medications."
+  },
+  {
+    id: 114,
+    chapterId: 2,
+    chapterName: "Antenatal Care",
+    question: "According to the World Health Organization (WHO), approximately how many maternal deaths occurred daily from preventable pregnancy and childbirth causes in 2020?",
+    options: {
+      A: "About 50 maternal deaths",
+      B: "About 200 maternal deaths",
+      C: "About 800 maternal deaths",
+      D: "About 1,500 maternal deaths",
+      E: "About 5,000 maternal deaths"
+    },
+    answer: "C",
+    rationale: "In 2020, there were approximately 800 maternal deaths per day from preventable causes related to pregnancy and childbirth, meaning a woman dies around every 2 minutes. Ninety-nine percent of these occur in low- and lower-middle-income countries."
+  },
+  {
+    id: 115,
+    chapterId: 2,
+    chapterName: "Antenatal Care",
+    question: "Which of the following represents a key systemic finding highlighted in the Ockenden review of maternity services?",
+    options: {
+      A: "Continuity of carer was overwhelmingly successful in all clinics.",
+      B: "Patient safety was sometimes compromised or overlooked in a rigid pursuit of vaginal birth goals.",
+      C: "Home deliveries were found to be completely unsafe for both primiparae and multiparae.",
+      D: "Obstetricians did not require any multi-professional training.",
+      E: "Electronic record systems caused more deaths than clinical errors."
+    },
+    answer: "B",
+    rationale: "The Ockenden review (2022) found that patient safety was sometimes overlooked in a drive to keep Caesarean section rates low and pursue natural vaginal births, highlighting the absolute need for robust safety cultures, multi-professional oversight, and listening to women."
+  },
+  {
+    id: 116,
+    chapterId: 3,
+    chapterName: "Normal Fetal Development and Growth",
+    question: "What does the Developmental Origins of Health and Disease (DOHaD) hypothesis describe?",
+    options: {
+      A: "Paternal genetics alone are responsible for adult-onset chronic kidney disease.",
+      B: "Symmetric fetal growth is purely driven by post-natal environmental pathogens.",
+      C: "Reduced fetal growth and in-utero nutritional restrictions are strongly associated with chronic conditions in adulthood, including coronary heart disease, stroke, diabetes, and hypertension.",
+      D: "Early cleavage anomalies prevent all future organogenesis.",
+      E: "Surgical closure of fetal shunts in-utero is required to prevent adult cardiac failure."
+    },
+    answer: "C",
+    rationale: "The DOHaD (or Barker) hypothesis states that intrauterine environmental factors (like nutritional restriction or poor placental perfusion) trigger fetal adaptations that permanently reprogram physiology, increasing susceptibility to cardiovascular and metabolic diseases in adult life."
+  },
+  {
+    id: 117,
+    chapterId: 3,
+    chapterName: "Normal Fetal Development and Growth",
+    question: "How many umbilical vessels are normally present in a healthy umbilical cord, and which is responsible for returning well-oxygenated blood to the fetus?",
+    options: {
+      A: "One artery and one vein; the artery carries oxygenated blood.",
+      B: "Two arteries and one vein; the single umbilical vein carries oxygenated blood.",
+      C: "Two veins and one artery; the arteries carry oxygenated blood.",
+      D: "Three veins and three arteries; the central vein is responsible.",
+      E: "No veins or arteries exist; oxygen is absorbed directly through the skin in-utero."
+    },
+    answer: "B",
+    rationale: "The normal umbilical cord has three vessels: two umbilical arteries and one umbilical vein. The umbilical vein is responsible for carrying nutrient- and oxygen-rich blood from the placenta to the fetal venous system."
+  },
+  {
+    id: 118,
+    chapterId: 4,
+    chapterName: "Assessment of Fetal Well-being",
+    question: "Who was the pioneering obstetrician who held the Regius Chair of Midwifery at Glasgow University and first successfully recorded clear echoes from the fetal head using ultrasound in 1959?",
+    options: {
+      A: "Professor Ian Donald",
+      B: "Professor Neville Barnes",
+      C: "Sir Simpson Chamberlen",
+      D: "Professor William Smellie",
+      E: "Professor Robert Dawes"
+    },
+    answer: "A",
+    rationale: "In 1959, Professor Ian Donald, the Regius Chair of Midwifery at Glasgow University, first demonstrated that high-frequency ultrasound could obtain clear echoes from the fetal head, laying the foundation for modern diagnostic ultrasound in obstetrics."
+  },
+  {
+    id: 119,
+    chapterId: 4,
+    chapterName: "Assessment of Fetal Well-being",
+    question: "In twin pregnancies, what does the presence of the 'lambda' or 'twin peak' sign on early first-trimester ultrasound represent?",
+    options: {
+      A: "Monochorionic monoamniotic twin pregnancy",
+      B: "Dichorionic twin pregnancy",
+      C: "Conjoined twins split",
+      D: "Empty amniotic sac (vanished twin)",
+      E: "Twin-to-twin transfusion syndrome"
+    },
+    answer: "B",
+    rationale: "The 'lambda' (or twin peak) sign, characterized by a triangular projection of chorionic tissue extending into the base of the inter-twin membrane, is diagnostic of dichorionicity. In contrast, monochorionic scans show a thin 'T' sign at the membrane junction."
+  },
+  {
+    id: 120,
+    chapterId: 5,
+    chapterName: "Prenatal Diagnosis",
+    question: "In high-income countries like the UK, what is currently the most common clinical reason for performing invasive prenatal diagnostic testing?",
+    options: {
+      A: "Genetic screening for cystic fibrosis",
+      B: "Fetal sorting for sickle cell disease",
+      C: "Down syndrome (Trisomy 21) assessment following a high-risk screening result",
+      D: "Excluding neural tube defects in late pregnancy",
+      E: "Determining single-gene carrier Status of the mother"
+    },
+    answer: "C",
+    rationale: "While invasive tests can diagnose many genetic diseases, Down syndrome (Trisomy 21) screening remains the most common entry point for performing diagnostic amniocentesis or chorionic villus sampling (CVS) in high-risk pregnancies."
+  },
+  {
+    id: 121,
+    chapterId: 5,
+    chapterName: "Prenatal Diagnosis",
+    question: "On a prenatal anomaly ultrasound, how is gastroschisis typically distinguished from exomphalos?",
+    options: {
+      A: "Gastroschisis is always covered by a clear membrane containing the liver.",
+      B: "Gastroschisis is a pararectal defect (typically to the right of the cord insertion) with free-floating, non-membrane-covered bowel loops.",
+      C: "Exomphalos is lateral to the cord and never associated with chromosomal abnormalities.",
+      D: "Both appear as identical smooth herniations without differences.",
+      E: "Gastroschisis involves only the bladder, not the bowel."
+    },
+    answer: "B",
+    rationale: "Gastroschisis is a full-thickness para-umbilical abdominal wall defect with herniated bowel coils floating freely in the amniotic fluid without a covering membrane. Exomphalos (omphalocele) is a midline defect at the cord insertion covered by a peritoneal sac, frequently associated with Trisomy 18 or 13."
+  },
+  {
+    id: 122,
+    chapterId: 6,
+    chapterName: "Antenatal Obstetric Complications",
+    question: "What is currently the leading cause of direct maternal death in the UK according to recent maternal death reports?",
+    options: {
+      A: "Pre-eclampsia and eclamptic fits",
+      B: "Venous Thromboembolism (VTE and Pulmonary Embolism)",
+      C: "Uterine atony postpartum hemorrhage",
+      D: "Amniotic fluid embolism",
+      E: "Sepsis from Group A Streptococcus"
+    },
+    answer: "B",
+    rationale: "Venous Thromboembolism (VTE) leading to pulmonary embolism remains the leading cause of direct maternal death in the UK (occurring during or up to 6 weeks after pregnancy). This highlights the importance of risk-assessing all pregnant women for thromboprophylaxis."
+  },
+  {
+    id: 123,
+    chapterId: 6,
+    chapterName: "Antenatal Obstetric Complications",
+    question: "In patients with suspected obstetric cholestasis, which serum bile acid level is associated with a significantly increased risk of sudden intrauterine fetal death?",
+    options: {
+      A: "Bile acids > 10 umol/L",
+      B: "Bile acids > 20 umol/L",
+      C: "Bile acids > 40 umol/L",
+      D: "Bile acids >= 100 umol/L",
+      E: "Bile acids always remain normal in severe disease."
+    },
+    answer: "D",
+    rationale: "While bile acid levels > 40 umol/L carry risk of preterm labor, a severe elevation of bile acids to 100 umol/L or more is associated with a sharp increase in spontaneous, unpredictable late stillbirths, justifying planned induction at 35-37 weeks."
+  },
+  {
+    id: 124,
+    chapterId: 7,
+    chapterName: "Multiple Pregnancy",
+    question: "In the UK, what is the approximate baseline rate of multiple pregnancies among all births?",
+    options: {
+      A: "About 2 per 1,000 births",
+      B: "About 6 per 1,000 births",
+      C: "About 16 per 1,000 births",
+      D: "About 35 per 1,000 births",
+      E: "About 50 per 1,000 births"
+    },
+    answer: "C",
+    rationale: "Multiple pregnancies complicate approximately 16 per 1,000 births in the UK. This rate has risen over past decades due to advancing maternal age (increased FSH levels triggering polyovulation) and widespread use of assisted reproductive technologies."
+  },
+  {
+    id: 125,
+    chapterId: 7,
+    chapterName: "Multiple Pregnancy",
+    question: "What is the typical incidence of Twin-to-Twin Transfusion Syndrome (TTTS) among monochorionic diamniotic pregnancies?",
+    options: {
+      A: "Less than 1%",
+      B: "Approximately 10-15%",
+      C: "Approximately 30-40%",
+      D: "Nearly 50%",
+      E: "Only occurs in dizygotic twins."
+    },
+    answer: "B",
+    rationale: "Twin-to-Twin Transfusion Syndrome occurs in approximately 10-15% of monochorionic-diamniotic twin gestations, driven by unbalanced flow through deep arteriovenous vascular anastomoses in the shared placenta."
+  },
+  {
+    id: 126,
+    chapterId: 8,
+    chapterName: "Pre-existing Medical Disorders",
+    question: "A pregnant patient with epilepsy is on monotherapy. What represents the safest overall antiepileptic choices associated with the lowest baseline rate of major congenital malformations?",
+    options: {
+      A: "Sodium valproate and Phenytoin",
+      B: "Lamotrigine and Levetiracetam",
+      C: "Carbamazepine and Phenobarbital",
+      D: "Topiramate and Valproate",
+      E: "No drugs are safe; she must immediately stop all therapy."
+    },
+    answer: "B",
+    rationale: "Lamotrigine and Levetiracetam have become the first-line therapies for epilepsy in women of childbearing age due to reassuring safety profiles, with the lowest rates of fetal malformation (~2-3%) compared to Valproate (>10%)."
+  },
+  {
+    id: 127,
+    chapterId: 8,
+    chapterName: "Pre-existing Medical Disorders",
+    question: "Regarding asthma management during pregnancy, which is the most critical guideline to follow?",
+    options: {
+      A: "Stop all inhaled corticosteroids immediately to prevent cleft palate.",
+      B: "Avoid inhaled beta-sympathomimetics as they delay labour.",
+      C: "It is significantly safer to maintain good control of asthma with standard drugs than to allow poorly controlled asthma with hypoxic episodes.",
+      D: "Switch immediately to high-dose oral prednisone as it is safer than inhalers.",
+      E: "Always perform Caesarean section at 32 weeks."
+    },
+    answer: "C",
+    rationale: "Uncontrolled asthma carries high risks of maternal hypoxia, pre-eclampsia, restricted fetal growth (FGR), and preterm birth. Inhaled corticosteroids and bronchodilators are safe to use in pregnancy and are key to preventing asthma exacerbations."
+  },
+  {
+    id: 128,
+    chapterId: 9,
+    chapterName: "Obstetric Medicine",
+    question: "What are the NICE-recommended blood pressure thresholds for diagnosing gestational hypertension, and how is it confirmed?",
+    options: {
+      A: "Systolic BP >= 130 and Diastolic BP >= 80 on a single random clinic reading",
+      B: "Systolic BP >= 140 mmHg and/or Diastolic BP >= 90 mmHg, measured on at least two occasions 4 hours apart after 20 weeks in a previously normotensive woman",
+      C: "Systolic BP >= 160 mmHg measured within 10 minutes",
+      D: "Diastolic BP >= 100 mmHg irrespective of gestational age or repeat checks",
+      E: "BP is only evaluated in the dynamic recumbent position."
+    },
+    answer: "B",
+    rationale: "Gestational hypertension is defined as new-onset hypertension (Systolic BP >= 140 mmHg and/or Diastolic BP >= 90 mmHg) presenting after 20 weeks' gestation in a previously normotensive woman, confirmed with two readings at least 4 hours apart."
+  },
+  {
+    id: 129,
+    chapterId: 9,
+    chapterName: "Obstetric Medicine",
+    question: "How is the sFlt-1:PlGF ratio clinically utilized in managing suspected pre-eclampsia?",
+    options: {
+      A: "Ratio > 100 rules out pre-eclampsia for 6 months.",
+      B: "A sFlt-1:PlGF ratio of less than 38 can highly reliably rule out pre-eclampsia within the next 7 days in women with clinical suspicion.",
+      C: "It is used exclusively to diagnose thyroid disease.",
+      D: "It replaces the need for blood pressure cuffs.",
+      E: "It determines fetal gender at 10 weeks."
+    },
+    answer: "B",
+    rationale: "The sFlt-1 (soluble fms-like tyrosine kinase-1) to PlGF (placental growth factor) ratio reflects the balance of angiogenic factors. A ratio < 38 has a very high negative predictive value, ruling out the development of pre-eclampsia for 1 week."
+  },
+  {
+    id: 130,
+    chapterId: 10,
+    chapterName: "Antenatal Emergencies",
+    question: "A patient at 38 weeks is diagnosed with a persistent transverse lie / shoulder presentation. What is the correct management plan?",
+    options: {
+      A: "Attempt immediate vaginal breech extraction.",
+      B: "Proceed to elective/planned Caesarean section if the transverse lie persists in early labour or if spontaneous membrane rupture occurs.",
+      C: "Administer systemic oxytocin to force a vertical lie.",
+      D: "Prepare for forceps delivery.",
+      E: "Perform routine amniotomy and send the patient home."
+    },
+    answer: "B",
+    rationale: "A transverse lie is unstable and vaginal birth is mechanically impossible; pushing with a shoulder presentation risks cord prolapse or uterine rupture. If lie remains transverse at term or membranes rupture, Caesarean delivery is required."
+  },
+  {
+    id: 131,
+    chapterId: 10,
+    chapterName: "Antenatal Emergencies",
+    question: "On vaginal examination, an umbilical cord is noted to be pulsating in the vagina after membrane rupture. While preparing for an emergency Caesarean section, what maternal position is recommended?",
+    options: {
+      A: "Supine flat on her back",
+      B: "Lithotomy position with head elevated",
+      C: "Knee-to-chest position, or left lateral with the head slightly declined",
+      D: "High Fowler's sitting upright",
+      E: "Trendelenburg on a wedge tilt"
+    },
+    answer: "C",
+    rationale: "The priority in cord prolapse is to prevent the presenting part from compressing the cord and cutting off fetal blood supply. Knee-to-chest, or left lateral positions with head down, help gravity pull the fetus back into the abdomen, relieving compression."
+  },
+  {
+    id: 132,
+    chapterId: 11,
+    chapterName: "Normal Labour",
+    question: "Regarding the pelvic inlet (brim), what are the typical dimensions of the normal gynaecoid transverse and anterior-posterior (conjugate) diameters?",
+    options: {
+      A: "Transverse is 11.0 cm, and Anterior-Posterior is 13.5 cm",
+      B: "Transverse is 13.5 cm, and Anterior-Posterior is 11.0 cm",
+      C: "Both diameters are exactly 10.0 cm",
+      D: "Transverse is 9.5 cm, and Anterior-Posterior is 9.5 cm",
+      E: "Transverse is 15.0 cm, and Anterior-Posterior is 15.0 cm"
+    },
+    answer: "B",
+    rationale: "The pelvic inlet is widest in the transverse diameter (13.5 cm) and narrowest in the anterior-posterior (or conjugate) diameter (11.0 cm). The fetal head typically enters the inlet in a transverse position to take advantage of this widest diameter."
+  },
+  {
+    id: 133,
+    chapterId: 11,
+    chapterName: "Normal Labour",
+    question: "What represents the correct physiological sequence of the cardinal movements of delivery as the fetal head passes through the pelvis?",
+    options: {
+      A: "Flexion, Descent, Internal rotation, Extension, Restitution, External rotation",
+      B: "Engagement, Descent, Flexion, Internal rotation, Extension, Restitution, External rotation",
+      C: "Descent, Extension, Internal rotation, Restitution, Flexion, External rotation",
+      D: "Engagement, Extension, Restitution, Flexion, Internal rotation, External rotation",
+      E: "Extension, Flexion, Descent, Internal rotation, External rotation, Restitution"
+    },
+    answer: "B",
+    rationale: "The cardinal movements of labour reflect the adaptations the fetal head makes to navigate the changing contours of the maternal pelvis: Engagement, Descent, Flexion, Internal rotation, Extension, Restitution, and External rotation."
+  },
+  {
+    id: 134,
+    chapterId: 12,
+    chapterName: "Monitoring in Labour",
+    question: "On a standard WHO partogram used to monitor labour progress in the active first stage, what does the 'Alert' and 'Action' lines represent?",
+    options: {
+      A: "Alert tells the husband; Action tells the anaesthetist.",
+      B: "Expected rate of 1 cm/hour dilatation (Alert), and a line drawn 4 hours to the right of it (Action) indicating need to consider augmentation or transfer.",
+      C: "Expected cervical dilatation of 10 cm within 2 hours.",
+      D: "Routine vaginal examination every 15 minutes.",
+      E: "Baseline heart rate threshold of 100 bpm."
+    },
+    answer: "B",
+    rationale: "The partogram maps cervical dilatation over time. The Alert line represents expected progress of 1 cm/hour in active labor. If progress falls to the right of the Alert line, it represents delay. The Action line is placed 4 hours to the right of the Alert line to flag the need for active intervention (e.g. ARM, oxytocin, or Caesarean section)."
+  },
+  {
+    id: 135,
+    chapterId: 12,
+    chapterName: "Monitoring in Labour",
+    question: "A borderline pH result of 7.20 to 7.24 is obtained on fetal scalp blood sampling. What represents the correct management guideline?",
+    options: {
+      A: "Perform an immediate Category 1 Caesarean section.",
+      B: "Repeat the measurement within 30 minutes, or sooner if the CTG trace deteriorates.",
+      C: "Commence high-dose oxytocin immediately.",
+      D: "Discharge the patient from the labour suite.",
+      E: "Repeat the test daily for 3 days."
+    },
+    answer: "B",
+    rationale: "A borderline pH of 7.21-7.24 indicates potential early acidemia but doesn't immediately mandate delivery if CTG is stable. The guideline is to repeat the FBS within 30 minutes to check the trend (falling pH merits delivery)."
+  },
+  {
+    id: 136,
+    chapterId: 13,
+    chapterName: "Pain Relief in Labour",
+    question: "Regarding relaxation in warm water (water immersion) during the first stage of labour, which is the correct safety recommendation?",
+    options: {
+      A: "The water temperature must be kept high, ideally 40-42 C.",
+      B: "The water temperature should not exceed 38 C (target 37-37.5 C) to prevent maternal pyrexia and fetal tachycardia.",
+      C: "Water immersion is strictly contraindicated in all low-risk nulliparous women.",
+      D: "It significantly increases the rate of emergency Caesarean sections.",
+      E: "It has no analgesic benefit whatsoever."
+    },
+    answer: "B",
+    rationale: "Warm water immersion provides excellent non-pharmacological relaxation and pain relief during the first stage. Keeping the temperature <= 37.5 C prevents maternal pyrexia, which causes direct warming of the fetus and subsequent fetal tachycardia."
+  },
+  {
+    id: 137,
+    chapterId: 13,
+    chapterName: "Pain Relief in Labour",
+    question: "What represents a significant physiological side effect of systemic opioids (e.g., Pethidine or Diamorphine) during labour?",
+    options: {
+      A: "Accelerated gastric emptying",
+      B: "Delayed gastric emptying (increasing risk of aspiration under general anaesthesia)",
+      C: "Significant maternal hyperreflexia",
+      D: "Preterm closure of fetal ductus arteriosus",
+      E: "Rapid dilation of the cervix"
+    },
+    answer: "B",
+    rationale: "Opioids cause delayed gastric emptying, which poses a serious hazard if the patient subsequently requires an emergency general anaesthetic for operative delivery (risk of Mendelson's syndrome / acid aspiration). They also cross the placenta and may cause neonatal respiratory depression."
+  },
+  {
+    id: 138,
+    chapterId: 14,
+    chapterName: "Delivery",
+    question: "According to RCOG/Ten Teachers guidelines, what represents the precise anatomical definition of a second-degree perineal tear?",
+    options: {
+      A: "Involvement of the vaginal epithelium and perineal skin only",
+      B: "Injury to the perineal muscles and fascia, but not extending into the anal sphincter complex",
+      C: "Complete division of the external and internal anal sphincters",
+      D: "Extension through the sphincter complex into the anorectal mucosa",
+      E: "Damage to the clitoral hood and labia minora only"
+    },
+    answer: "B",
+    rationale: "A second-degree tear involves the pelvic floor muscles (e.g. bulbocavernosus, superficial transverse perineal) and perineal fascia. It does not involving the anal sphincter complex, which defines a third-degree tear."
+  },
+  {
+    id: 139,
+    chapterId: 14,
+    chapterName: "Delivery",
+    question: "During an episiotomy, why is the incision specifically made at an angle of 60 degrees to the midline (mediolateral episiotomy)?",
+    options: {
+      A: "To minimize bleeding from the internal pudendal artery.",
+      B: "To ensure the scar remains cosmetically hidden.",
+      C: "To minimize safety risks of the incision extending and tearing into the anal sphincter complex (OASI).",
+      D: "Because it makes suturing significantly faster.",
+      E: "To avoid injuring the femoral nerve."
+    },
+    answer: "C",
+    rationale: "A mediolateral episiotomy is cut at a 60-degree angle from the posterior fourchette to redirect forces away from the midline, significantly reducing the likelihood of extension into the external and internal anal sphincters (which carries higher rates of incontinence)."
+  },
+  {
+    id: 140,
+    chapterId: 15,
+    chapterName: "Obstetric Emergencies in Labour",
+    question: "According to the RCOG Green-top Guideline, what represents the formal definition of shoulder dystocia?",
+    options: {
+      A: "A breech delivery where the arms are hyperextended above the head",
+      B: "A vaginal cephalic birth that requires additional obstetric manoeuvres to deliver the shoulders after gentle downward traction on the head has failed",
+      C: "The fetal head remains high and unengaged at station -2",
+      D: "Spontaneous separation of the symphysis pelvis diastasis of more than 5 cm",
+      E: "Delivery of the body before the chin has delivered"
+    },
+    answer: "B",
+    rationale: "Shoulder dystocia is diagnosed when the fetal shoulders fail to deliver with standard gentle axial traction, requiring additional maneuvers (like McRoberts or suprapubic pressure) to disimpact the anterior shoulder from under the symphysis pubis."
+  },
+  {
+    id: 141,
+    chapterId: 15,
+    chapterName: "Obstetric Emergencies in Labour",
+    question: "What percentage of shoulder dystocia cases can behave successfully and resolve using the McRoberts maneuver alone?",
+    options: {
+      A: "Less than 10%",
+      B: "Approximately 30%",
+      C: "Approximately 50%",
+      D: "Approximately 90%",
+      E: "Always requires a classical hysterotomy."
+    },
+    answer: "D",
+    rationale: "The McRoberts maneuver is highly successful on its own, resolving approximately 90% of shoulder dystocia cases. It works by hyperflexing the mother's legs, which rotates the pelvis cephalad and flattens the sacral promontory, clearing space."
+  },
+  {
+    id: 142,
+    chapterId: 16,
+    chapterName: "The Puerperium and Neonate",
+    question: "Following delivery, uterine involution is the process whereby the post-partum uterus returns to pre-pregnancy weight. Primarily, what biological process is responsible for the reduction in size of the smooth muscle cells?",
+    options: {
+      A: "Apoptosis of myometrial cells",
+      B: "Coagulative necrosis of tissues",
+      C: "Autolysis, through enzymatic digestion of cytoplasm",
+      D: "Decreased blood flow causing ischemic infarcts",
+      E: "Hyperplasia of muscular elements"
+    },
+    answer: "C",
+    rationale: "Myometrial cells diminish dramatically in size rather than number. This involution occurs primarily by autolysis, whereby excess muscle protein is enzymatically broken down into cytoplasm and absorbed into the circulation to be excreted in urine."
+  },
+  {
+    id: 143,
+    chapterId: 16,
+    chapterName: "The Puerperium and Neonate",
+    question: "In the UK, what is the first-line screening modality used for the newborn hearing screening programme?",
+    options: {
+      A: "Automated behavioral audiometry",
+      B: "Bilateral tympanometry",
+      C: "Transient otoacoustic emissions (TEOAE)",
+      D: "Automated auditory brainstem response (AABR) in all babies first-line",
+      E: "Visual reinforcement audiometry"
+    },
+    answer: "C",
+    rationale: "The newborn hearing screening programme primarily utilizes transient otoacoustic emissions (TEOAE) first-line. If there is a weak or absent response, an automated auditory brainstem response (AABR) test is performed as a second-tier screen."
+  },
+  {
+    id: 144,
+    chapterId: 16,
+    chapterName: "The Puerperium and Neonate",
+    question: "The newborn blood spot (Guthrie) test is performed at day 5. Which of the following conditions is NOT screened for as part of this routine national programme in the UK?",
+    options: {
+      A: "Cystic fibrosis",
+      B: "Down syndrome (Trisomy 21)",
+      C: "Congenital hypothyroidism",
+      D: "Sickle cell disease",
+      E: "Phenylketonuria (PKU)"
+    },
+    answer: "B",
+    rationale: "The newborn blood spot test screens for 9 conditions (cystic fibrosis, congenital hypothyroidism, sickle cell disease, phenylketonuria, MCAD deficiency, homocystinuria, maple syrup urine disease, isovaleric acidaemia, and glutaric aciduria type 1). Down syndrome is a chromosomal abnormality screened for antenatally, not included in the neonatal blood spot card."
+  },
+  {
+    id: 145,
+    chapterId: 16,
+    chapterName: "The Puerperium and Neonate",
+    question: "The milk-ejection or let-down reflex of breastfeeding is driven by which hormones, and how is it initiated?",
+    options: {
+      A: "Estrogen surges triggered by infant crying",
+      B: "Prolactin release from the posterior pituitary triggered by progesterone withdrawal",
+      C: "Suckling stimulating the pulsatile release of Oxytocin from the posterior pituitary, causing myoepithelial contraction",
+      D: "Progesterone release from the corpus luteum",
+      E: "Dopamine levels rising in response to nursing"
+    },
+    answer: "C",
+    rationale: "While Prolactin (produced in the anterior pituitary) stimulates milk synthesis, the milk-ejection reflex is driven by Oxytocin. Sensory impulses from suckling travel to the posterior pituitary, releasing oxytocin, which contracts myoepithelial cells surrounding alveoli to squeeze milk into the ducts."
   }
 ];
 

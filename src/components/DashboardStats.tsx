@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ProgressState, Chapter, Question } from "../types";
 import { CHAPTERS, QUESTIONS } from "../data/questions";
 import { Brain, Award, BookMarked, BarChart2, TrendingUp, Sparkles, Loader2, ArrowRight } from "lucide-react";
+import { GoogleGenAI } from "@google/genai";
 
 interface DashboardStatsProps {
   progress: ProgressState;
@@ -58,27 +59,55 @@ export default function DashboardStats({
         chapterMasteryMap[m.name] = m.accuracy;
       });
 
-      const response = await fetch("/api/gemini/recommend", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          stats: {
-            completedQuizzes: progress.completedQuizzes,
-            averageScore: progress.averageScore || accuracy,
-            chapterMastery: chapterMasteryMap,
-          }
-        }),
-      });
+      const clientApiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      if (clientApiKey) {
+        const aiInstance = new GoogleGenAI({ apiKey: clientApiKey });
+        const response = await aiInstance.models.generateContent({
+          model: "gemini-3.5-flash",
+          contents: `
+            As an expert medical tutor for "Obstetrics by Ten Teachers", analyze this student's diagnostic progress and construct a structured 3-step study priority plan:
+            
+            Current Progress Metrics:
+            - Total Practice Sessions: ${progress.completedQuizzes}
+            - Overall Average Score: ${progress.averageScore || accuracy}%
+            - Chapter Performance (Percentage Correct): ${JSON.stringify(chapterMasteryMap)}
+            
+            Please generate:
+            - Analysis of weak spots and strong suits.
+            - Two highly targeted, specific chapters the student should immediately focus on, with custom advice on high-yield facts (e.g. specific timings, drugs of choice, critical emergency maneuvers).
+            - An encouraging, professional closing sentence.
+            
+            Provide the response styled strictly in beautiful Markdown.
+          `,
+        });
+        setRecommendation(response.text || "No recommendations returned from Gemini.");
+      } else {
+        const response = await fetch("/api/gemini/recommend", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            stats: {
+              completedQuizzes: progress.completedQuizzes,
+              averageScore: progress.averageScore || accuracy,
+              chapterMastery: chapterMasteryMap,
+            }
+          }),
+        });
 
-      if (!response.ok) {
-        throw new Error("Tutor service unavailable. Ensure GEMINI_API_KEY is configured in Settings > Secrets.");
+        if (!response.ok) {
+          throw new Error("Tutor service unavailable. Ensure GEMINI_API_KEY is configured in Settings > Secrets.");
+        }
+
+        const data = await response.json();
+        setRecommendation(data.recommendation);
       }
-
-      const data = await response.json();
-      setRecommendation(data.recommendation);
     } catch (err: any) {
       console.error(err);
-      setError(err.message || "Failed to retrieve advice from the AI companion.");
+      if (!import.meta.env.VITE_GEMINI_API_KEY && (err.message?.includes("Failed to fetch") || err.message?.includes("fetch"))) {
+        setError("AI tutor recommendation is configured via server proxy, but the backend is currently offline. Since you deployed to static hosting like GitHub Pages, please configure the 'VITE_GEMINI_API_KEY' environment variable inside your GitHub Repository secrets, or run this app in a full-stack Cloud Run environment.");
+      } else {
+        setError(err.message || "Failed to retrieve advice from the AI companion.");
+      }
     } finally {
       setLoading(false);
     }
